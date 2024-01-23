@@ -1,0 +1,84 @@
+﻿@model EL.EmployeeModel
+@using (Html.BeginForm("Save", "Employee", FormMethod.Post, new { role = "form", id = "saveForm" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        @*here role = "form" for bootstrap design (optional) *@
+        <h4>New Employee</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @*here the field for User Name *@
+        <div class="form-group">
+            @Html.HiddenFor(model => model.UserInfoID)
+            @Html.LabelFor(model => model.UserName, new { @class = "control-label col-md-4" })
+            <div class="col-md-8">
+                @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", @id = "txtUserName" })
+                @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @*here the field for Full Name *@
+        <div class="form-group">
+            @Html.LabelFor(model => model.FullName, new { @class = "control-label col-md-4" })
+            <div class="col-md-8">
+                @Html.TextBoxFor(model => model.FullName, new { @class = "form-control", @id = "txFullName" })
+                @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        @*here the field for Contact Number *@
+        <div class="form-group">
+            @Html.LabelFor(model => model.CNumber, new { @class = "control-label col-md-4" })
+            <div class="col-md-8">
+                @Html.TextBoxFor(model => model.CNumber, new { @class = "form-control", @id = "txtCNumber" })
+                @Html.ValidationMessageFor(model => model.CNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @*here the field for Email *@
+        <div class="form-group">
+            @Html.LabelFor(model => model.EMail, new { @class = "control-label col-md-4" })
+            <div class="col-md-8">
+                @Html.TextBoxFor(model => model.EMail, new { @class = "form-control", @id = "txtEmail" })
+                @Html.ValidationMessageFor(model => model.EMail, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @*here the field for Roles *@
+        <div class="form-group">
+            @Html.LabelFor(model => model.RoleID, new { @class = "control-label col-md-4" })
+            <div class="col-md-8">
+                @Html.DropDownListFor(model => model.RoleID, ViewBag.Roles as SelectList, "Select Role", new { @class = "form-control", @id = "cmbRole" })
+                @Html.ValidationMessageFor(model => model.RoleID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @*here the field for person Designations *@
+        <div class="form-group">
+            @Html.LabelFor(model => model.DesignationID, new { @class = "control-label col-md-4" })
+            <div class="col-md-8">
+                @Html.DropDownListFor(model => model.DesignationID, ViewBag.Designations as SelectList, "Select Designation", new { @class = "form-control", @id = "cmbDesignation" })
+                @Html.ValidationMessageFor(model => model.DesignationID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @*here the field for person Reporting Lead *@
+        <div class="form-group">
+            @Html.LabelFor(model => model.ReportingLeadID, new { @class = "control-label col-md-4" })
+            <div class="col-md-8">
+                @Html.DropDownListFor(model => model.ReportingLeadID, ViewBag.ReportingLeads as SelectList, "Select Reporting Lead", new { @class = "form-control", @id = "cmbReportingLead" })
+                @Html.ValidationMessageFor(model => model.ReportingLeadID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-6">
+                @Html.ActionLink("Back To List", "Index", null, new { @style = "margin-left:50px; font-weight:bold;" })
+            </div>
+            <div class="col-md-6">
+                <input type="submit" value="Save" class="btn btn-default" />
+                <div id="msg"></div>
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,95 @@
+﻿@model IEnumerable<EL.ProjectModel>
+
+<h2>
+    @Html.ActionLink("Create New Project", "NewProject","Project", new { @style = "font-size:22px;", @class = "popup"})
+</h2>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+<style>
+    /*This is optional, I have added this for make looks good*/
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+
+    html, body, footer, #body {
+        background-color: #fff;
+    }
+
+    .ui-widget-header {
+        border: none !important;
+        background: none !important;
+        color: #222222;
+        font-weight: bold;
+    }
+
+    .ui-state-default, .ui-state-hover {
+        border: none !important;
+        background: none !important;
+    }
+
+    .ui-dialog {
+        webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+        box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    }
+
+    h2 {
+        margin-top: 0px;
+        font-size: 30px;
+    }
+
+    .success {
+        color: green;
+    }
+
+    .failed {
+        color: red;
+    }
+</style>
+
+<table class="table">
+    <thead style="background-color: orange;color: blue">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectName)
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectName)
+            </td>
+            <td>
+                @Html.ActionLink("Assign Team", "Asign", new {id = item.ProjectID}, new {@class = "popup"}) |
+                @Html.ActionLink("Edit", "Edit", new {id = item.ProjectID}, new {@class = "popup"}) |
+                @Html.ActionLink("Delete", "Delete", new {id = item.ProjectID}, new {@class = "popup"})
+            </td>
+        </tr>
+    }
+</table>
+@section scripts
+{
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="~/Scripts/Project.js"></script>
+}

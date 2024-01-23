@@ -1,0 +1,29 @@
+﻿@model EL.ProjectModel
+
+@using (Html.BeginForm("Update", "Project", FormMethod.Post, new { role = "form", id = "UpdateForm" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <h4>Edit Project</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.HiddenFor(model => model.ProjectID)
+            @Html.LabelFor(model => model.ProjectName, new { @class = "control-label col-md-4" })
+            <div class="col-md-8">
+                @Html.TextBoxFor(model => model.ProjectName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ProjectName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-6">
+                @Html.ActionLink("Back To List", "Index", null, new { @style = "margin-left:50px; font-weight:bold;" })
+            </div>
+            <div class="col-md-6">
+                <input type="submit" value="Save" class="btn btn-default" />
+                <div id="msg"></div>
+            </div>
+        </div>
+    </div>
+}

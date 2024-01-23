@@ -1,0 +1,679 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{17D4C788-64DB-4922-8FCC-0D394CEB91DE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IIT</RootNamespace>
+    <AssemblyName>IIT</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="DevExpress.BonusSkins.v21.2" />
+    <Reference Include="DevExpress.Charts.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v21.2" />
+    <Reference Include="DevExpress.Data.v21.2" />
+    <Reference Include="DevExpress.DataAccess.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v21.2.Drawing, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Export, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v21.2" />
+    <Reference Include="DevExpress.Sparkline.v21.2.Core" />
+    <Reference Include="DevExpress.Utils.v21.2.UI, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v21.2" />
+    <Reference Include="DevExpress.XtraDialogs.v21.2" />
+    <Reference Include="DevExpress.Printing.v21.2.Core" />
+    <Reference Include="DevExpress.XtraGauges.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v21.2.Extensions, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v21.2.Core.Desktop, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="IITSkin">
+      <HintPath>..\..\..\Skin\IITSkin\IITSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionText.cs" />
+    <Compile Include="BankingUtility\ucChequeBookEntry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BankingUtility\ucChequeBookEntry.Designer.cs">
+      <DependentUpon>ucChequeBookEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BankingUtility\ucChequeLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BankingUtility\ucChequeLog.Designer.cs">
+      <DependentUpon>ucChequeLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\frmAddGSTNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entity\frmAddGSTNumber.Designer.cs">
+      <DependentUpon>frmAddGSTNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\frmAddPartner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entity\frmAddPartner.Designer.cs">
+      <DependentUpon>frmAddPartner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\frmEntityIndividual.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Entity\frmEntityIndividual.Designer.cs">
+      <DependentUpon>frmEntityIndividual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\frmEntityList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Entity\frmEntityList.Designer.cs">
+      <DependentUpon>frmEntityList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\frmEntityLogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entity\frmEntityLogo.Designer.cs">
+      <DependentUpon>frmEntityLogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entity\frmPartnershipFirm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Entity\frmPartnershipFirm.Designer.cs">
+      <DependentUpon>frmPartnershipFirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucBankAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucBankAccount.Designer.cs">
+      <DependentUpon>ucBankAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucCapitalAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucCapitalAccount.Designer.cs">
+      <DependentUpon>ucCapitalAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucCapitalAccountFirm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucCapitalAccountFirm.Designer.cs">
+      <DependentUpon>ucCapitalAccountFirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucCashInHand.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucCashInHand.Designer.cs">
+      <DependentUpon>ucCashInHand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucCCorODC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucCCorODC.Designer.cs">
+      <DependentUpon>ucCCorODC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucCapitalAccountPropietor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucCapitalAccountPropietor.Designer.cs">
+      <DependentUpon>ucCapitalAccountPropietor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucCommission.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucCommission.Designer.cs">
+      <DependentUpon>ucCommission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucCreditors.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucCreditors.Designer.cs">
+      <DependentUpon>ucCreditors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucCurrentAccountFirm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucCurrentAccountFirm.Designer.cs">
+      <DependentUpon>ucCurrentAccountFirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucDebitors.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucDebitors.Designer.cs">
+      <DependentUpon>ucDebitors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucDepreciation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucDepreciation.Designer.cs">
+      <DependentUpon>ucDepreciation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucDirectIncomes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucDirectIncomes.Designer.cs">
+      <DependentUpon>ucDirectIncomes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucDividend.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucDividend.Designer.cs">
+      <DependentUpon>ucDividend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucEmployeePaysheet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucEmployeePaysheet.Designer.cs">
+      <DependentUpon>ucEmployeePaysheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucFixedAssetsCompany.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucFixedAssetsCompany.Designer.cs">
+      <DependentUpon>ucFixedAssetsCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucFixedAssetsIndividual.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucFixedAssetsIndividual.Designer.cs">
+      <DependentUpon>ucFixedAssetsIndividual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucIndirectIncomes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucIndirectIncomes.Designer.cs">
+      <DependentUpon>ucIndirectIncomes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucInvestment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucInvestment.Designer.cs">
+      <DependentUpon>ucInvestment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucLedgerTypeBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucLoans.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucLoans.Designer.cs">
+      <DependentUpon>ucLoans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucRawMaterials.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucRawMaterials.Designer.cs">
+      <DependentUpon>ucRawMaterials.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucRegular.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucRegular.Designer.cs">
+      <DependentUpon>ucRegular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucReservesAndSurplus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucReservesAndSurplus.Designer.cs">
+      <DependentUpon>ucReservesAndSurplus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucServices.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucServices.Designer.cs">
+      <DependentUpon>ucServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LedgerType\ucStatutoryDues.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LedgerType\ucStatutoryDues.Designer.cs">
+      <DependentUpon>ucStatutoryDues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ledger\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ledger\frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSingularMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSingularMain.Designer.cs">
+      <DependentUpon>frmSingularMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ledger\ucLedgerList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ledger\ucLedgerList.Designer.cs">
+      <DependentUpon>ucLedgerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ledger\ucLedgerReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ledger\ucLedgerReport.Designer.cs">
+      <DependentUpon>ucLedgerReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ledger\ucMultiVoucher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ledger\ucMultiVoucher.Designer.cs">
+      <DependentUpon>ucMultiVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\frmProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\frmProgress.Designer.cs">
+      <DependentUpon>frmProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NavigationBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ledger\frmLedgerCreation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ledger\frmLedgerCreation.Designer.cs">
+      <DependentUpon>frmLedgerCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ledger\frmVoucherList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ledger\frmVoucherList.Designer.cs">
+      <DependentUpon>frmVoucherList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ledger\frmVoucher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Ledger\frmVoucher.Designer.cs">
+      <DependentUpon>frmVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ledger\Report\rptLedgerPrinting.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ledger\Report\rptLedgerPrinting.Designer.cs">
+      <DependentUpon>rptLedgerPrinting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ledger\Report\rptVoucher.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ledger\Report\rptVoucher.Designer.cs">
+      <DependentUpon>rptVoucher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\frmGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\frmGroup.Designer.cs">
+      <DependentUpon>frmGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\frmGroupList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\frmGroupList.Designer.cs">
+      <DependentUpon>frmGroupList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\frmSector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\frmSector.Designer.cs">
+      <DependentUpon>frmSector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\frmSectorList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\frmSectorList.Designer.cs">
+      <DependentUpon>frmSectorList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\frmSubGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\frmSubGroup.Designer.cs">
+      <DependentUpon>frmSubGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Masters\frmSubGroupList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Masters\frmSubGroupList.Designer.cs">
+      <DependentUpon>frmSubGroupList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportForms\frmTrialBalanceSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\frmTrialBalanceSettings.Designer.cs">
+      <DependentUpon>frmTrialBalanceSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\ucBalanceSheet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportForms\ucBalanceSheet.Designer.cs">
+      <DependentUpon>ucBalanceSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\ucTrailBalance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportForms\ucTrailBalance.Designer.cs">
+      <DependentUpon>ucTrailBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Routes\AccountingReportsRoute.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Routes\AccountingRoute.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Routes\BankingUtilityRoute.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Routes\EntityTypeRoute.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Routes\LedgerCreationRoute.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Routes\PurchaseRegisterRoute.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Routes\RequisitionFormsRoute.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Routes\SalesRegisterRoute.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Routes\StockStatementsRoute.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Routes\VoucherEntryRoute.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucNavigationRouter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucNavigationRouter.Designer.cs">
+      <DependentUpon>ucNavigationRouter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility.cs" />
+    <EmbeddedResource Include="BankingUtility\ucChequeBookEntry.resx">
+      <DependentUpon>ucChequeBookEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BankingUtility\ucChequeLog.resx">
+      <DependentUpon>ucChequeLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entity\frmAddGSTNumber.resx">
+      <DependentUpon>frmAddGSTNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entity\frmAddPartner.resx">
+      <DependentUpon>frmAddPartner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entity\frmEntityIndividual.resx">
+      <DependentUpon>frmEntityIndividual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entity\frmEntityList.resx">
+      <DependentUpon>frmEntityList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entity\frmEntityLogo.resx">
+      <DependentUpon>frmEntityLogo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Entity\frmPartnershipFirm.resx">
+      <DependentUpon>frmPartnershipFirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucBankAccount.resx">
+      <DependentUpon>ucBankAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucCapitalAccount.resx">
+      <DependentUpon>ucCapitalAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucCapitalAccountFirm.resx">
+      <DependentUpon>ucCapitalAccountFirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucCashInHand.resx">
+      <DependentUpon>ucCashInHand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucCCorODC.resx">
+      <DependentUpon>ucCCorODC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucCapitalAccountPropietor.resx">
+      <DependentUpon>ucCapitalAccountPropietor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucCommission.resx">
+      <DependentUpon>ucCommission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucCreditors.resx">
+      <DependentUpon>ucCreditors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucCurrentAccountFirm.resx">
+      <DependentUpon>ucCurrentAccountFirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucDebitors.resx">
+      <DependentUpon>ucDebitors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucDepreciation.resx">
+      <DependentUpon>ucDepreciation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucDirectIncomes.resx">
+      <DependentUpon>ucDirectIncomes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucDividend.resx">
+      <DependentUpon>ucDividend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucEmployeePaysheet.resx">
+      <DependentUpon>ucEmployeePaysheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucFixedAssetsCompany.resx">
+      <DependentUpon>ucFixedAssetsCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucFixedAssetsIndividual.resx">
+      <DependentUpon>ucFixedAssetsIndividual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucIndirectIncomes.resx">
+      <DependentUpon>ucIndirectIncomes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucInvestment.resx">
+      <DependentUpon>ucInvestment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucLedgerTypeBase.resx">
+      <DependentUpon>ucLedgerTypeBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucLoans.resx">
+      <DependentUpon>ucLoans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucRawMaterials.resx">
+      <DependentUpon>ucRawMaterials.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucRegular.resx">
+      <DependentUpon>ucRegular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucReservesAndSurplus.resx">
+      <DependentUpon>ucReservesAndSurplus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucServices.resx">
+      <DependentUpon>ucServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LedgerType\ucStatutoryDues.resx">
+      <DependentUpon>ucStatutoryDues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ledger\frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSingularMain.resx">
+      <DependentUpon>frmSingularMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ledger\frmLedgerCreation.resx">
+      <DependentUpon>frmLedgerCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ledger\frmVoucherList.resx">
+      <DependentUpon>frmVoucherList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ledger\frmVoucher.resx">
+      <DependentUpon>frmVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ledger\Report\rptLedgerPrinting.resx">
+      <DependentUpon>rptLedgerPrinting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ledger\Report\rptVoucher.resx">
+      <DependentUpon>rptVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ledger\ucLedgerList.resx">
+      <DependentUpon>ucLedgerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ledger\ucLedgerReport.resx">
+      <DependentUpon>ucLedgerReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ledger\ucMultiVoucher.resx">
+      <DependentUpon>ucMultiVoucher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\frmGroup.resx">
+      <DependentUpon>frmGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\frmGroupList.resx">
+      <DependentUpon>frmGroupList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\frmProgress.resx">
+      <DependentUpon>frmProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\frmSector.resx">
+      <DependentUpon>frmSector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\frmSectorList.resx">
+      <DependentUpon>frmSectorList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\frmSubGroup.resx">
+      <DependentUpon>frmSubGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Masters\frmSubGroupList.resx">
+      <DependentUpon>frmSubGroupList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationBase.resx">
+      <DependentUpon>NavigationBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <!--<EmbeddedResource Include="Properties\licenses.licx" />-->
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReportForms\frmTrialBalanceSettings.resx">
+      <DependentUpon>frmTrialBalanceSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\ucBalanceSheet.resx">
+      <DependentUpon>ucBalanceSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\ucTrailBalance.resx">
+      <DependentUpon>ucTrailBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucNavigationRouter.resx">
+      <DependentUpon>ucNavigationRouter.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{06704d83-be16-4b2a-956c-6da890305eb1}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository\Repository.csproj">
+      <Project>{f9c9eea4-9e71-428c-bb6d-e61cbe6831bb}</Project>
+      <Name>Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName) == Release (
+robocopy $(ProjectDir)..\Repository\ $(TargetDir) IITData14.mdf
+robocopy $(ProjectDir)..\Repository\ $(TargetDir) IITData14_log.ldf
+) ELSE (
+robocopy $(ProjectDir)..\Repository\ $(TargetDir) IITData14.mdf /XO
+robocopy $(ProjectDir)..\Repository\ $(TargetDir) IITData14_log.ldf /XO
+)
+
+icacls "$(TargetDir)\IITData14.mdf" /grant Everyone:(f)
+icacls "$(TargetDir)\IITData14_log.ldf" /grant Everyone:(f)</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

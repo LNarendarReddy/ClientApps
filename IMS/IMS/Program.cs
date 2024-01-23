@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Forms;
+using DevExpress.UserSkins;
+using DevExpress.Skins;
+using DevExpress.LookAndFeel;
+using System.Reflection;
+using System.ComponentModel;
+
+namespace IMS
+{
+    static class Program
+    {
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            Assembly asm = typeof(DevExpress.UserSkins.IMSSkin).Assembly;
+            DevExpress.Skins.SkinManager.Default.RegisterAssembly(asm);
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            BonusSkins.Register();
+            SkinManager.EnableFormSkins();
+            SkinManager.EnableMdiFormSkins();
+            UserLookAndFeel.Default.SetSkinStyle("My Office 2016 Colorful");
+            Application.Run(new frmLogin());
+        }
+        public class SkinRegistration : Component
+        {
+            public SkinRegistration()
+            {
+                DevExpress.Skins.SkinManager.Default.RegisterAssembly(typeof(DevExpress.UserSkins.IMSSkin).Assembly);
+            }
+        }
+    }
+}
