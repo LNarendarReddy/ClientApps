@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "PMS"
-#define MyAppVersion "1.7 15-11-2020"
+#define MyAppVersion "1.8 23-01-2024"
 #define MyAppPublisher "GyanaSoft"
 #define MyAppURL "http://www.GyanaSoft.com/"
 #define MyAppExeName "PMS.exe"
@@ -39,7 +39,7 @@ Name: "german"; MessagesFile: "compiler:Languages\German.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-source: "E:\Setup\PMS\Input\*"; destdir: "{win}\PMS"; flags: ignoreversion recursesubdirs createallsubdirs
+source: "..\..\PMS\PMS\bin\Release\*"; destdir: "{win}\PMS"; flags: ignoreversion recursesubdirs createallsubdirs
 
 [Dirs]
 
