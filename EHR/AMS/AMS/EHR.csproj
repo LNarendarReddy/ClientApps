@@ -1,0 +1,937 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{39E5527F-FB76-4FC7-8728-298DB693EDFD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EHR</RootNamespace>
+    <AssemblyName>EHR</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>IPOLogo1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="CategisSecurity, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Security Library\Prod\CategisSecurity.dll</HintPath>
+    </Reference>
+    <Reference Include="CategisSkin, Version=18.2.13.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CategisSkin\CategisSkin\CategisSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v21.2" />
+    <Reference Include="DevExpress.Charts.v21.2.Core, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v21.2, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v21.2, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v21.2, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dialogs.v21.2.Core, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v21.2, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v21.2.Core, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v21.2.Export, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v21.2.Core, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v21.2.Core" />
+    <Reference Include="DevExpress.Utils.v21.2.UI, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v21.2, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v21.2, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v21.2, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v21.2, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v21.2, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraDialogs.v21.2, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v21.2.Core" />
+    <Reference Include="DevExpress.XtraEditors.v21.2, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraGauges.v21.2.Core, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v21.2, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v21.2, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v21.2, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v21.2, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v21.2.Extensions, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v21.2, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v21.2, Version=21.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="log4net">
+      <HintPath>E:\CalcPro\04_Tools\ThirdParty\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Exchange.WebServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Exchange.WebServices.2.2\lib\40\Microsoft.Exchange.WebServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Exchange.WebServices.Auth, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Exchange.WebServices.2.2\lib\40\Microsoft.Exchange.WebServices.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TFSSkin">
+      <HintPath>C:\Users\DELL\Documents\My DXSkins\TFSSkin\TFSSkin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assessment\frmMAssessmentDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assessment\frmMAssessmentDashBoard.Designer.cs">
+      <DependentUpon>frmMAssessmentDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptCoverPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptCoverPage.Designer.cs">
+      <DependentUpon>rptCoverPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptDPeerReview.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptDPeerReview.Designer.cs">
+      <DependentUpon>rptDPeerReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptMGoals.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptMGoals.Designer.cs">
+      <DependentUpon>rptMGoals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptSPeerReview.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptSPeerReview.Designer.cs">
+      <DependentUpon>rptSPeerReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptSeflGoals.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptSeflGoals.Designer.cs">
+      <DependentUpon>rptSeflGoals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptWorkPlaceRatings.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptWorkPlaceRatings.Designer.cs">
+      <DependentUpon>rptWorkPlaceRatings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLookupSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLookupSettings.Designer.cs">
+      <DependentUpon>frmLookupSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\frmViewTestCases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\frmViewTestCases.Designer.cs">
+      <DependentUpon>frmViewTestCases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveModule\Reports\frmYearlyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaveModule\Reports\frmYearlyReport.Designer.cs">
+      <DependentUpon>frmYearlyReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\frmAddNewProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\frmAddNewProject.Designer.cs">
+      <DependentUpon>frmAddNewProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\frmChangeLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\frmChangeLog.Designer.cs">
+      <DependentUpon>frmChangeLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\frmCompleteQA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\frmCompleteQA.Designer.cs">
+      <DependentUpon>frmCompleteQA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\frmComponent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\frmComponent.Designer.cs">
+      <DependentUpon>frmComponent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\frmChanges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\frmChanges.Designer.cs">
+      <DependentUpon>frmChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\frmCopyTestCases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\frmCopyTestCases.Designer.cs">
+      <DependentUpon>frmCopyTestCases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\frmDescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\frmDescription.Designer.cs">
+      <DependentUpon>frmDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\frmDevBuild.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\frmDevBuild.Designer.cs">
+      <DependentUpon>frmDevBuild.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\frmProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\frmProject.Designer.cs">
+      <DependentUpon>frmProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\frmProjectTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\frmProjectTeam.Designer.cs">
+      <DependentUpon>frmProjectTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\frmRequirement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\frmRequirement.Designer.cs">
+      <DependentUpon>frmRequirement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\frmScenario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\frmScenario.Designer.cs">
+      <DependentUpon>frmScenario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\frmSelectTestcases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\frmSelectTestcases.Designer.cs">
+      <DependentUpon>frmSelectTestcases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\frmTestcase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\frmTestcase.Designer.cs">
+      <DependentUpon>frmTestcase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\frmTestcaseChanges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\frmTestcaseChanges.Designer.cs">
+      <DependentUpon>frmTestcaseChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\frmTestExecution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\frmTestExecution.Designer.cs">
+      <DependentUpon>frmTestExecution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\frmTestExecutionLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\frmTestExecutionLog.Designer.cs">
+      <DependentUpon>frmTestExecutionLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\frmViewTestcase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\frmViewTestcase.Designer.cs">
+      <DependentUpon>frmViewTestcase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\frmAddProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assessment\frmAddProject.Designer.cs">
+      <DependentUpon>frmAddProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateInstaller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateInstaller.Designer.cs">
+      <DependentUpon>frmUpdateInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveModule\frmApproveLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaveModule\frmApproveLeave.Designer.cs">
+      <DependentUpon>frmApproveLeave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveModule\frmComments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaveModule\frmComments.Designer.cs">
+      <DependentUpon>frmComments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveModule\frmLeaveHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaveModule\frmLeaveHistory.Designer.cs">
+      <DependentUpon>frmLeaveHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveModule\frmApproveCompOff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaveModule\frmApproveCompOff.Designer.cs">
+      <DependentUpon>frmApproveCompOff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveModule\Reports\frmLeaveBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaveModule\Reports\frmLeaveBalance.Designer.cs">
+      <DependentUpon>frmLeaveBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveModule\Reports\frmLeaveCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaveModule\Reports\frmLeaveCalendar.Designer.cs">
+      <DependentUpon>frmLeaveCalendar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveModule\Reports\frmLeaveHistoryForLead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaveModule\Reports\frmLeaveHistoryForLead.Designer.cs">
+      <DependentUpon>frmLeaveHistoryForLead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveModule\Reports\frmViewCompOffForLead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaveModule\Reports\frmViewCompOffForLead.Designer.cs">
+      <DependentUpon>frmViewCompOffForLead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveModule\frmViewCompOff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaveModule\frmViewCompOff.Designer.cs">
+      <DependentUpon>frmViewCompOff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\frmProjectPhase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\frmProjectPhase.Designer.cs">
+      <DependentUpon>frmProjectPhase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\Reports\rptQADetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Project\Reports\rptQADetail.Designer.cs">
+      <DependentUpon>rptQADetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\Reports\rptQAReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Project\Reports\rptQAReport.Designer.cs">
+      <DependentUpon>rptQAReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\Reports\rptQAHeader.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Project\Reports\rptQAHeader.Designer.cs">
+      <DependentUpon>rptQAHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timesheet\frmDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timesheet\frmDashBoard.Designer.cs">
+      <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timesheet\frmHolidayMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timesheet\frmHolidayMaster.Designer.cs">
+      <DependentUpon>frmHolidayMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timesheet\frmProjectWorkType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timesheet\frmProjectWorkType.Designer.cs">
+      <DependentUpon>frmProjectWorkType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timesheet\frmSubTaskMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timesheet\frmSubTaskMaster.Designer.cs">
+      <DependentUpon>frmSubTaskMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timesheet\frmTaskEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timesheet\frmTaskEntry.Designer.cs">
+      <DependentUpon>frmTaskEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timesheet\frmTaskMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timesheet\frmTaskMaster.Designer.cs">
+      <DependentUpon>frmTaskMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timesheet\frmTimesheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timesheet\frmTimesheet.Designer.cs">
+      <DependentUpon>frmTimesheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timesheet\frmTimeSheetEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timesheet\frmTimeSheetEdit.Designer.cs">
+      <DependentUpon>frmTimeSheetEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timesheet\frmViewTimesheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timesheet\frmViewTimesheet.Designer.cs">
+      <DependentUpon>frmViewTimesheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timesheet\frmWorkType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timesheet\frmWorkType.Designer.cs">
+      <DependentUpon>frmWorkType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timesheet\Reports\frmEmployeeHours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timesheet\Reports\frmEmployeeHours.Designer.cs">
+      <DependentUpon>frmEmployeeHours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timesheet\Reports\frmEmployeeTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timesheet\Reports\frmEmployeeTask.Designer.cs">
+      <DependentUpon>frmEmployeeTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timesheet\Reports\frmEmployeeTimings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timesheet\Reports\frmEmployeeTimings.Designer.cs">
+      <DependentUpon>frmEmployeeTimings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Timesheet\Reports\frmProjectTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Timesheet\Reports\frmProjectTask.Designer.cs">
+      <DependentUpon>frmProjectTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmChangePassword.designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\frmDAssessment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assessment\frmDAssessment.Designer.cs">
+      <DependentUpon>frmDAssessment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveModule\frmFinancialYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaveModule\frmFinancialYear.Designer.cs">
+      <DependentUpon>frmFinancialYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveModule\frmLeaveManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaveModule\frmLeaveManagement.Designer.cs">
+      <DependentUpon>frmLeaveManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\frmMAssessment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assessment\frmMAssessment.Designer.cs">
+      <DependentUpon>frmMAssessment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSpinner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSpinner.designer.cs">
+      <DependentUpon>frmSpinner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Project\frmProjectList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Project\frmProjectList.Designer.cs">
+      <DependentUpon>frmProjectList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeaveModule\frmWeekendWork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LeaveModule\frmWeekendWork.Designer.cs">
+      <DependentUpon>frmWeekendWork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmUser.designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\frmViewProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assessment\frmViewProject.Designer.cs">
+      <DependentUpon>frmViewProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Assessment\Reports\rptDGeneralAssessment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptDGeneralAssessment.Designer.cs">
+      <DependentUpon>rptDGeneralAssessment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptDProjectAssessment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptDProjectAssessment.Designer.cs">
+      <DependentUpon>rptDProjectAssessment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptDLeadAssessment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptDLeadAssessment.Designer.cs">
+      <DependentUpon>rptDLeadAssessment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptFinalRatingWithLR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptFinalRatingWithLR.Designer.cs">
+      <DependentUpon>rptFinalRatingWithLR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptFinalRating.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptFinalRating.Designer.cs">
+      <DependentUpon>rptFinalRating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptSProjectAssessment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptSProjectAssessment.Designer.cs">
+      <DependentUpon>rptSProjectAssessment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptDTechnicalAssessment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptDTechnicalAssessment.Designer.cs">
+      <DependentUpon>rptDTechnicalAssessment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptSTechnicalAssessment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptSTechnicalAssessment.Designer.cs">
+      <DependentUpon>rptSTechnicalAssessment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptSGeneralAssessment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptSGeneralAssessment.Designer.cs">
+      <DependentUpon>rptSGeneralAssessment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptSLeadershipAssessment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Assessment\Reports\rptSLeadershipAssessment.Designer.cs">
+      <DependentUpon>rptSLeadershipAssessment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmUserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmUserList.Designer.cs">
+      <DependentUpon>frmUserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utility.cs" />
+    <Compile Include="Assessment\frmAssessment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Assessment\frmAssessment.Designer.cs">
+      <DependentUpon>frmAssessment.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Assessment\frmMAssessmentDashBoard.resx">
+      <DependentUpon>frmMAssessmentDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment\Reports\rptCoverPage.resx">
+      <DependentUpon>rptCoverPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment\Reports\rptDPeerReview.resx">
+      <DependentUpon>rptDPeerReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment\Reports\rptMGoals.resx">
+      <DependentUpon>rptMGoals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment\Reports\rptSPeerReview.resx">
+      <DependentUpon>rptSPeerReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment\Reports\rptSeflGoals.resx">
+      <DependentUpon>rptSeflGoals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment\Reports\rptWorkPlaceRatings.resx">
+      <DependentUpon>rptWorkPlaceRatings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLookupSettings.resx">
+      <DependentUpon>frmLookupSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\frmViewTestCases.resx">
+      <DependentUpon>frmViewTestCases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveModule\Reports\frmYearlyReport.resx">
+      <DependentUpon>frmYearlyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\frmAddNewProject.resx">
+      <DependentUpon>frmAddNewProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\frmChangeLog.resx">
+      <DependentUpon>frmChangeLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\frmCompleteQA.resx">
+      <DependentUpon>frmCompleteQA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\frmComponent.resx">
+      <DependentUpon>frmComponent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\frmChanges.resx">
+      <DependentUpon>frmChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\frmCopyTestCases.resx">
+      <DependentUpon>frmCopyTestCases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\frmDescription.resx">
+      <DependentUpon>frmDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\frmDevBuild.resx">
+      <DependentUpon>frmDevBuild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\frmProject.resx">
+      <DependentUpon>frmProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\frmRequirement.resx">
+      <DependentUpon>frmRequirement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\frmScenario.resx">
+      <DependentUpon>frmScenario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\frmSelectTestcases.resx">
+      <DependentUpon>frmSelectTestcases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\frmTestcase.resx">
+      <DependentUpon>frmTestcase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\frmTestcaseChanges.resx">
+      <DependentUpon>frmTestcaseChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\frmTestExecution.resx">
+      <DependentUpon>frmTestExecution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\frmTestExecutionLog.resx">
+      <DependentUpon>frmTestExecutionLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\frmViewTestcase.resx">
+      <DependentUpon>frmViewTestcase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment\frmAddProject.resx">
+      <DependentUpon>frmAddProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\frmProjectTeam.resx">
+      <DependentUpon>frmProjectTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateInstaller.resx">
+      <DependentUpon>frmUpdateInstaller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveModule\frmApproveLeave.resx">
+      <DependentUpon>frmApproveLeave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveModule\frmComments.resx">
+      <DependentUpon>frmComments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveModule\frmLeaveHistory.resx">
+      <DependentUpon>frmLeaveHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveModule\frmApproveCompOff.resx">
+      <DependentUpon>frmApproveCompOff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveModule\Reports\frmLeaveBalance.resx">
+      <DependentUpon>frmLeaveBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveModule\Reports\frmLeaveCalendar.resx">
+      <DependentUpon>frmLeaveCalendar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveModule\Reports\frmLeaveHistoryForLead.resx">
+      <DependentUpon>frmLeaveHistoryForLead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveModule\Reports\frmViewCompOffForLead.resx">
+      <DependentUpon>frmViewCompOffForLead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveModule\frmViewCompOff.resx">
+      <DependentUpon>frmViewCompOff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\frmProjectPhase.resx">
+      <DependentUpon>frmProjectPhase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\Reports\rptQADetail.resx">
+      <DependentUpon>rptQADetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\Reports\rptQAReport.resx">
+      <DependentUpon>rptQAReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\Reports\rptQAHeader.resx">
+      <DependentUpon>rptQAHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timesheet\frmDashBoard.resx">
+      <DependentUpon>frmDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timesheet\frmHolidayMaster.resx">
+      <DependentUpon>frmHolidayMaster.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timesheet\frmProjectWorkType.resx">
+      <DependentUpon>frmProjectWorkType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timesheet\frmSubTaskMaster.resx">
+      <DependentUpon>frmSubTaskMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timesheet\frmTaskEntry.resx">
+      <DependentUpon>frmTaskEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timesheet\frmTaskMaster.resx">
+      <DependentUpon>frmTaskMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timesheet\frmTimesheet.resx">
+      <DependentUpon>frmTimesheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timesheet\frmTimeSheetEdit.resx">
+      <DependentUpon>frmTimeSheetEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timesheet\frmViewTimesheet.resx">
+      <DependentUpon>frmViewTimesheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timesheet\frmWorkType.resx">
+      <DependentUpon>frmWorkType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timesheet\Reports\frmEmployeeHours.resx">
+      <DependentUpon>frmEmployeeHours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timesheet\Reports\frmEmployeeTask.resx">
+      <DependentUpon>frmEmployeeTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timesheet\Reports\frmEmployeeTimings.resx">
+      <DependentUpon>frmEmployeeTimings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Timesheet\Reports\frmProjectTask.resx">
+      <DependentUpon>frmProjectTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment\frmDAssessment.resx">
+      <DependentUpon>frmDAssessment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveModule\frmFinancialYear.resx">
+      <DependentUpon>frmFinancialYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveModule\frmLeaveManagement.resx">
+      <DependentUpon>frmLeaveManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment\frmMAssessment.resx">
+      <DependentUpon>frmMAssessment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSpinner.resx">
+      <DependentUpon>frmSpinner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Project\frmProjectList.resx">
+      <DependentUpon>frmProjectList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LeaveModule\frmWeekendWork.resx">
+      <DependentUpon>frmWeekendWork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment\frmViewProject.resx">
+      <DependentUpon>frmViewProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Assessment\frmAssessment.resx">
+      <DependentUpon>frmAssessment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment\Reports\rptDLeadAssessment.resx">
+      <DependentUpon>rptDLeadAssessment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment\Reports\rptFinalRatingWithLR.resx">
+      <DependentUpon>rptFinalRatingWithLR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment\Reports\rptFinalRating.resx">
+      <DependentUpon>rptFinalRating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment\Reports\rptDGeneralAssessment.resx">
+      <DependentUpon>rptDGeneralAssessment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment\Reports\rptDProjectAssessment.resx">
+      <DependentUpon>rptDProjectAssessment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment\Reports\rptSProjectAssessment.resx">
+      <DependentUpon>rptSProjectAssessment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment\Reports\rptDTechnicalAssessment.resx">
+      <DependentUpon>rptDTechnicalAssessment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment\Reports\rptSTechnicalAssessment.resx">
+      <DependentUpon>rptSTechnicalAssessment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment\Reports\rptSGeneralAssessment.resx">
+      <DependentUpon>rptSGeneralAssessment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assessment\Reports\rptSLeadershipAssessment.resx">
+      <DependentUpon>rptSLeadershipAssessment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmUserList.resx">
+      <DependentUpon>frmUserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DL\DL.csproj">
+      <Project>{51dcf4dc-8784-4503-8b5c-dc628299b039}</Project>
+      <Name>DL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EL\EL.csproj">
+      <Project>{f81c1004-da47-48a7-a98e-a2408ba2adc2}</Project>
+      <Name>EL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="IPOLogo1.ico" />
+    <Content Include="LogoMakr_6XKPis.ico" />
+    <None Include="Resources\IPOLogo1.png" />
+    <None Include="Resources\IPOLogo.png" />
+    <None Include="Resources\CoverPage1.png" />
+    <None Include="Resources\Softwaretogo.png" />
+    <None Include="Resources\STG Logo-Black.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\logouticon.png" />
+    <None Include="Resources\Apps-session-logout-icon.png" />
+    <None Include="Resources\STG_NewEn.png" />
+    <None Include="Resources\Time_Task.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
