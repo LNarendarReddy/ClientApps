@@ -22,15 +22,12 @@ namespace PMS
         [STAThread]
         static void Main()
         {
-            Assembly asm = typeof(DevExpress.UserSkins.BetaSkin).Assembly;
-            DevExpress.Skins.SkinManager.Default.RegisterAssembly(asm);
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             SkinManager.EnableMdiFormSkins();
-            UserLookAndFeel.Default.SetSkinStyle("POSSkin");
 
             SplashScreenManager.ShowForm(null, typeof(frmSpinner), true, true, false);
             SplashScreenManager.Default.SetWaitFormDescription("                  Connecting to database...");
@@ -48,13 +45,6 @@ namespace PMS
                 Thread.Sleep(5000);
                 SplashScreenManager.CloseForm();
                 Application.Exit();
-            }
-        }
-        public class SkinRegistration : Component
-        {
-            public SkinRegistration()
-            {
-                DevExpress.Skins.SkinManager.Default.RegisterAssembly(typeof(DevExpress.UserSkins.BetaSkin).Assembly);
             }
         }
     }
